@@ -1,0 +1,14 @@
+use("tech_store")
+
+db.products.updateOne(
+  // query
+  // $ObjectId -> Function to find a doc with objID
+  {_id: ObjectId("63fa99ac85ad6bdb4f040f81")},
+  // change => operators
+  {
+    // $inc -> Increments the value of a field by the specified amount
+    $inc: {
+      price: 1000
+    }
+  }
+)

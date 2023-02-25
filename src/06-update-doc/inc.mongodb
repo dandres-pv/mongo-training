@@ -1,0 +1,13 @@
+use("tech_store")
+
+db.products.updateOne(
+  // query
+  {_id: 2},
+  // change => operators
+  {
+    // $inc -> Increments the value of a field by the specified amount
+    $inc: {
+      price: 200
+    }
+  }
+)

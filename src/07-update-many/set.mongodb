@@ -1,0 +1,37 @@
+use("sample_training")
+
+// $set -> Sets or create the value of a field in a document
+// db.zips.updateMany(
+//   // query
+//   { city: "CLEVELAND"},
+//   // update - operators
+//   {
+//     $set:{
+//       myAttr: "New attribute"
+//     }
+//   }
+// )
+
+// $rename -> Renames a field
+// db.zips.updateMany(
+//   // query
+//   { city: "CLEVELAND"},
+//   // update - operators
+//   {
+//     $rename:{
+//       myAttr: "new_attribute"
+//     }
+//   }
+// )
+
+// $unset -> Removes the specified field from a document
+db.zips.updateMany(
+  // query
+  { city: "CLEVELAND"},
+  // update - operators
+  {
+    $unset:{
+      new_attribute: ""
+    }
+  }
+)
