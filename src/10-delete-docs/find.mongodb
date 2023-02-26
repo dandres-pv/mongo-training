@@ -1,0 +1,3 @@
+use("tech_store")
+
+db.products.find()
